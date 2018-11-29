@@ -8,20 +8,13 @@ n = null;
 i = null;
 q = 0;
 cTime = null;
-ie = document.querySelector('#input');
-submit = document.querySelector('#submit');
-form = document.querySelector('#jj');
-div = document.querySelector('div');
-span = document.querySelector('#text');
-fastf = document.querySelector('#fastf');
-form.addEventListener('submit', function (e)
+$('#info').submit(function (e)
 {
   e.preventDefault();
-  i = ie.value;
+  i = $('#info').value;
   cb();
 });
-fastf.addEventListener('submit', function (e)
-{
+$('fastforward').submit(function (e) {
   e.preventDefault();
   clearTimeout(p.timeout.id);
   clearInterval(p.timeout.timeID);
@@ -122,8 +115,8 @@ function time(e = null)
   }
   else
   {
-    timeE = document.querySelector('#time');
-    timeT = timeE.innerHTML.split(':');
+    timeE = $('#time');
+    timeT = timeE.html().split(':');
     timeT[1]++;
     if (timeT[1] == 60)
     {
@@ -134,15 +127,14 @@ function time(e = null)
     {
       timeT[0] = 1;
     }
-    timeE.innerHTML = timeT.join(':' + ((timeT[1] < 10) ? '0' : ''));
+    timeE.html(timeT.join(':' + ((timeT[1] < 10) ? '0' : '')));
   }
 }
 
-function r(t)
+function r(text)
 {
-  ne = document.createElement('p');
-  ne.innerHTML = htmlentities(t);
-  span.append(ne);
+  response = $('<p>' + htmlentities(text) + '</p>');
+  $('#text').append(response);
 }
 
 function w(f, p = null, m = 1)
@@ -161,11 +153,11 @@ function s(f = !1)
 {
   if (f)
   {
-    fastf.style.display = 'initial';
+    $('#fastforward').css('display', 'initial');
   }
   else
   {
-    form.style.display = 'initial';
+    $('#info').css('display', 'initial');
   }
 }
 
@@ -173,11 +165,11 @@ function h(f = !1)
 {
   if (f)
   {
-    fastf.style.display = 'none';
+    $('#fastforward').css('display', 'none');
   }
   else
   {
-    form.style.display = 'none';
+    $('#info').css('display', 'none');
   }
 }
 
@@ -195,7 +187,7 @@ function htmlentities(str)
 
 function reset(url)
 {
-  div.style.display = 'none';
-  document.body.style.background = 'url(' + url + ') no-repeat center center fixed';
-  document.body.style.backgroundSize = 'cover';
+  $('div').css('display', 'none');
+  $('body').css('background', 'url(' + url + ') no-repeat center center fixed');
+  $('body').css('backgroundSize', 'cover');
 }
