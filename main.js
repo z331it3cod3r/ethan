@@ -1,4 +1,3 @@
-javascript: 
 p = {};
 e = {
   name: 'Ethan',
@@ -49,7 +48,7 @@ function cb()
         r('Welcome to the Cooper easter egg.');
         w(r, 'Unfortunately, he has requested a picture of the worst football team ever.');
         w(r, 'Goodbye, football-ly world.', 2);
-        w(reset, 'https://txcityservices.com/wp-content/uploads/2018/04/Dallas-Cowboys-Logo.jpg', 4);
+        w(reset, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgkLoFg5CIjBGQytTw-fIs0rCfjZ0wS3TBYnGq59oSiN2E1XU6Rg:https://txcityservices.com/wp-content/uploads/2018/04/Dallas-Cowboys-Logo.jpg', 4);
       }
       else
       {
