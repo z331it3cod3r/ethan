@@ -11,10 +11,10 @@ cTime = null;
 $('#info').submit(function (e)
 {
   e.preventDefault();
-  i = $('#info').value;
+  i = $('#input').value;
   cb();
 });
-$('fastforward').submit(function (e) {
+$('#fastforward').submit(function (e) {
   e.preventDefault();
   clearTimeout(p.timeout.id);
   clearInterval(p.timeout.timeID);
