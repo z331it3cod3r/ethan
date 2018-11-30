@@ -5,13 +5,13 @@ const e = {
   color: 'orange'
 };
 let n = null;
-let i = null;
+let userInput = null;
 let q = 0;
 cTime = null;
 $('#info').submit(function (e)
 {
   e.preventDefault();
-  i = $('#input').value;
+  userInput = $('#input').value;
   cb();
 });
 $('#fastforward').submit(function (e) {
@@ -27,7 +27,7 @@ function cb()
 {
   if (q === 0)
   {
-    if (i == 'gasp')
+    if (userInput == 'gasp')
     {
       r('Welcome to the Byron easter egg.');
       w(r, 'Unfortunately, he has requested a space paradox and everything we know is now lost.');
@@ -36,7 +36,7 @@ function cb()
     }
     else
     {
-      if (i == 'gaeCooper')
+      if (userInput == 'gaeCooper')
       {
         r('Welcome to the Cooper easter egg.');
         w(r, 'Unfortunately, he has requested a picture of the worst football team ever.');
@@ -45,7 +45,7 @@ function cb()
       }
       else
       {
-          p.name = i;
+          p.name = userInput;
           r('Hello ' + p.name + '!');
           w(r, 'My name is ' + e.name + '!');
           w(r, 'How old are you?', 2);
@@ -59,7 +59,7 @@ function cb()
   }
   if (q == 1)
   {
-    p.age = Math.floor(i);
+    p.age = Math.floor(userInput);
     r('Being ' + p.age + ' is awesome!');
     w(r, 'I\'m ' + e.age + ' years old' + (p.age == e.age ? ' too!' : '!'));
     w(r, 'What\'s your favorite color?', 2);
@@ -68,8 +68,8 @@ function cb()
   }
   if (q == 2)
   {
-    p.color = i;
-    document.body.style.background = i;
+    p.color = userInput;
+    document.body.style.background = p.color;
     r('There we go.');
     w(r, 'This is my favorite color.', 1);
     w(function ()
