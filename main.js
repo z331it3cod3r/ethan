@@ -1,12 +1,12 @@
-p = {};
-e = {
+let p = {};
+const e = {
   name: 'Ethan',
   age: '11',
   color: 'orange'
 };
-n = null;
-i = null;
-q = 0;
+let n = null;
+let i = null;
+let q = 0;
 cTime = null;
 $('#info').submit(function (e)
 {
