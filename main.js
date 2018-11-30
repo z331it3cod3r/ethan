@@ -11,7 +11,7 @@ cTime = null;
 $('#info').submit(function (e)
 {
   e.preventDefault();
-  userInput = $('#input').value();
+  userInput = $('#input').val();
   cb();
 });
 $('#fastforward').submit(function (e) {
@@ -49,9 +49,9 @@ function cb()
           r('Hello ' + p.name + '!');
           w(r, 'My name is ' + e.name + '!');
           w(r, 'How old are you?', 2);
-          ie.type = 'number';
-          ie.min = 1;
-          ie.max = 122;
+          $('#input').attr({type: 'number'});
+          $('#input').attr({min: 1});
+          $('#input').attr({max: 122});
           w(s, null, 2);
         
       }
@@ -63,7 +63,7 @@ function cb()
     r('Being ' + p.age + ' is awesome!');
     w(r, 'I\'m ' + e.age + ' years old' + (p.age == e.age ? ' too!' : '!'));
     w(r, 'What\'s your favorite color?', 2);
-    ie.type = 'color';
+    $('#input').attr({type: 'color'});
     w(s, null, 2);
   }
   if (loop == 2)
@@ -102,7 +102,7 @@ function cb()
       w(r, 'Also, be warned that pressing Fast Forward 3 times will cause a time paradox.');
     }
   }
-  q++;
+  loop++;
   h();
   h(!0);
   time();
