@@ -6,7 +6,7 @@ const e = {
 };
 let n = null;
 let userInput = null;
-let q = 0;
+let loop = 0;
 cTime = null;
 $('#info').submit(function (e)
 {
@@ -25,7 +25,7 @@ $('#fastforward').submit(function (e) {
 r('What is your name?');
 function cb()
 {
-  if (q === 0)
+  if (loop === 0)
   {
     if (userInput == 'gasp')
     {
@@ -57,7 +57,7 @@ function cb()
       }
     }
   }
-  if (q == 1)
+  if (loop == 1)
   {
     p.age = Math.floor(userInput);
     r('Being ' + p.age + ' is awesome!');
@@ -66,7 +66,7 @@ function cb()
     ie.type = 'color';
     w(s, null, 2);
   }
-  if (q == 2)
+  if (loop == 2)
   {
     p.color = userInput;
     document.body.style.background = p.color;
@@ -88,7 +88,7 @@ function cb()
     };
     w(s, !0, 5);
   }
-  if (q == 3)
+  if (loop == 3)
   {
     if (p.timeout)
     {
