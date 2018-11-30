@@ -11,7 +11,7 @@ cTime = null;
 $('#info').submit(function (e)
 {
   e.preventDefault();
-  userInput = $('#input').value;
+  userInput = $('#input').value();
   cb();
 });
 $('#fastforward').submit(function (e) {
