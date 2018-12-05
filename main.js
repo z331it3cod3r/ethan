@@ -101,6 +101,7 @@ function cb()
       r('Puny human using puny button...');
       w(r, 'Also, be warned that pressing Fast Forward 3 times will cause a time paradox.');
     }
+    w(r, 'Anyway, still in dev.', 2);
   }
   loop++;
   h();
