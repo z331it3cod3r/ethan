@@ -49,9 +49,9 @@ function cb()
           r('Hello ' + p.name + '!');
           w(r, 'My name is ' + e.name + '!');
           w(r, 'How old are you?', 2);
-          $('#input').attr({type: 'number'});
-          $('#input').attr({min: 1});
-          $('#input').attr({max: 122});
+          $('#input').attr({type: 'number',
+                            min: 1,
+                            max: 122});
           w(s, null, 2);
         
       }
