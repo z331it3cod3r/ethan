@@ -74,7 +74,7 @@ function cb()
     w(r, 'This is my favorite color.', 1);
     w(function ()
     {
-      div.style.backgroundColor = e.color;
+      $('div').css('backgroundColor', e.color);
     }, null, 2);
     w(r, 'Oh, wait. I need to go to basketball practice now.', 3);
     w(r, 'Be back in an hour.', 4);
