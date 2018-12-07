@@ -101,7 +101,21 @@ function cb()
       r('Puny human using puny button...');
       w(r, 'Also, be warned that pressing Fast Forward 3 times will cause a time paradox.');
     }
-    w(r, 'Anyway, still in dev.', 2);
+    h();
+    w(r, 'Anyway, let\'s play a game.', 2);
+    w(r, 'I bet you can\'t guess what number I\'m thinking of!', 3)
+    w(r, 'Rules: Ethan will think of a number between 1 and 10. You have to try and guess the number. Every time you are incorrect, ' +
+      'Ethan will tell you if it is too high or too low.', 4)
+    w(function() {
+      $('#fastforward').attr({
+        value: 'Start'
+      });
+      s(true);
+      $('#input').attr({type: 'number',
+        min: 1, 
+        max: 10
+      }, null, 4);
+    }
   }
   loop++;
   h();
@@ -166,11 +180,11 @@ function h(f = !1)
 {
   if (f)
   {
-    $('#fastforward').css('display', 'none');
+    $('#fastforward').hide();
   }
   else
   {
-    $('#info').css('display', 'none');
+    $('#info').hide();
   }
 }
 
