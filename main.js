@@ -103,9 +103,9 @@ function cb()
     }
     h();
     w(r, 'Anyway, let\'s play a game.', 2);
-    w(r, 'I bet you can\'t guess what number I\'m thinking of!', 3)
+    w(r, 'I bet you can\'t guess what number I\'m thinking of!', 3);
     w(r, 'Rules: Ethan will think of a number between 1 and 10. You have to try and guess the number. Every time you are incorrect, ' +
-      'Ethan will tell you if it is too high or too low.', 4)
+      'Ethan will tell you if it is too high or too low.', 4);
     w(function() {
       $('#fastforward').attr({
         value: 'Start'
@@ -115,7 +115,7 @@ function cb()
         min: 1, 
         max: 10
       }, null, 4);
-    }
+    });
   }
   loop++;
   h();
