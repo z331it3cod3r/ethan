@@ -110,7 +110,7 @@ function cb()
       $('#fastforward').attr({
         value: 'Start'
       });
-      s(true);
+      w(s, true, 4);
       $('#input').attr({type: 'number',
         min: 1, 
         max: 10
